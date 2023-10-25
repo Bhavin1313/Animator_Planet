@@ -9,7 +9,7 @@ class PlanetsModel {
   var distance;
   var description;
   var image;
-  var more;
+  List more;
 
   PlanetsModel({
     required this.position,
