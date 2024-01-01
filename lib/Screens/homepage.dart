@@ -19,6 +19,19 @@ class _HomePageState extends State<HomePage> {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        leading: IconButton(
+          icon: Icon(
+            Icons.favorite_border,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.pushNamed(context, 'fav');
+          },
+        ),
+      ),
       body: FutureBuilder(
         future: rootBundle.loadString("lib/Components/planets.json"),
         builder: (context, snapshot) {

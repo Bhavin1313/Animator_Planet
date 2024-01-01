@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:planets/Components/list.dart';
 
 import '../Model/planets_model.dart';
 
@@ -59,12 +62,16 @@ class _DetailScreenState extends State<DetailScreen> {
                               fontSize: 25,
                             ),
                           ),
-                          Text(
-                            "sza",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 25,
+                          IconButton(
+                            onPressed: () {
+                              if (favlist.contains(data)) {
+                                favlist.add(data as Map<String, dynamic>);
+                              }
+                              log("add");
+                            },
+                            icon: Icon(
+                              Icons.favorite_border,
+                              color: Colors.white,
                             ),
                           ),
                         ],

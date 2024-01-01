@@ -38,6 +38,7 @@ dependencies:
   google_fonts:
   shared_preferences:
   introduction_screen:
+  provider:
 
 dev_dependencies:
   flutter_test:

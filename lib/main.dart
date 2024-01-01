@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:planets/Screens/favScreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Screens/detailScreen.dart';
@@ -24,6 +25,7 @@ void main() async {
         'home': (context) => HomePage(),
         'detail': (context) => DetailScreen(),
         'image': (context) => Images(),
+        'fav': (context) => Fav(),
       },
     ),
   );
